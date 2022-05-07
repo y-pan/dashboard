@@ -5,7 +5,6 @@ node_modules/
 ignore/
 *.ignore.*
 
-src/io/scripts/env.sh
 config.json
 
 data/
