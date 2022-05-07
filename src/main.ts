@@ -49,6 +49,6 @@ app.get("/kube/log", respondKubeLog);
 
 app.get("*", respondNotFound);
 
-app.listen(config.port, async function () {
-  console.log(`Main is running on port: ${config.port}`);
+app.listen(config.serverPort, async function () {
+  console.log(`Dashboard is running on port: ${config.serverPort}`);
 });

@@ -1,5 +1,5 @@
 {
-  "port": 7777,
+  "serverPort": 7777,
   "logLevel": "debug",
   "targetLibs": "company-internal-lib1 company-internal-lib2",
   "portItems": [
