@@ -1,0 +1,16 @@
+node_modules/
+/src/**/*.js
+/src/**/*.js.map
+
+ignore/
+*.ignore.*
+
+src/io/scripts/env.sh
+config.json
+
+data/
+_outputs/
+
+nohup.out
+
+.DS_Store
