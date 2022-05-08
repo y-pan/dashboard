@@ -49,10 +49,14 @@ export function keba(key: string): string {
   return kebaKey;
 }
 
-export function isUpper(char: string) {
+export function isUpper(char: string): boolean {
   return isUpperCode(char.charCodeAt(0));
 }
 
 export function isUpperCode(charCode: number): boolean {
   return 65 <= charCode && charCode <= 90;
+}
+
+export function capitalize(word: string): string {
+  return word[0].toUpperCase() + word.slice(1);
 }

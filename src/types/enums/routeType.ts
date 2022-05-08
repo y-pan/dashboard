@@ -14,7 +14,7 @@ export enum RouteType {
   kubePods = "/kube/pods",
   kubePodsOff = "/kube/pods/off",
 
-  kubeLogDevAll = "/kube/log?namespace=dev-blue&serviceName=",
-  kubeLogDemoAll = "/kube/log?namespace=demo-blue&serviceName=",
-  kubeLogProdAll = "/kube/log?namespace=prod-red&serviceName=",
+  kubeLogDev = "/kube/log?namespace=dev-blue&serviceName=",
+  kubeLogDemo = "/kube/log?namespace=demo-blue&serviceName=",
+  kubeLogProd = "/kube/log?namespace=prod-red&serviceName=",
 }
