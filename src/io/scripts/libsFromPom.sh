@@ -1,6 +1,7 @@
 # Need to pass in the target lib name
-LIB1=$1
-LIB2=$2
+projectsContainerDir=$1
+LIB1=$2
+LIB2=$3
 
 selfFileName=`echo $0 | sed "s/.*\///" | sed "s/\.sh//"`
 
@@ -21,17 +22,18 @@ extractLibFromPomXml() {
   fi
 }
 
-projectsContainerDir=~/Documents/yun
 cd $projectsContainerDir
 allPom=`ls */pom.xml`
 
 echo "##### ${selfFileName} - `date +"%Y-%m-%d %H:%M:%S"` #####"
 for libName in "$@"
 do
+  if [ "$libName" != "$projectsContainerDir" ]; then
     echo "\n=== [$libName] in all pom.xml, under $projectsContainerDir ===\n" 
     for filePath in $allPom
     do 
       extractLibFromPomXml $filePath $libName
     done
+  fi
 done
 

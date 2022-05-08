@@ -15,6 +15,7 @@ import { RouteType } from "./types/enums/routeType";
 import respondNotFound from "./routes/notFound";
 import { respondLibs } from "./routes/libs";
 import { respondKubeLog } from "./routes/kubeLog";
+import { validateConfig } from "./util/config";
 
 let config: any;
 
@@ -24,6 +25,8 @@ try {
   console.error("config.json is missing. The example here: `src/config.example.json`");
   throw e;
 }
+
+validateConfig();
 
 const app: express.Application = express();
 

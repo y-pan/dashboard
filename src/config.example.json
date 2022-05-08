@@ -6,5 +6,7 @@
     { "name": "my-app-1", "port": 8000 },
     { "name": "my-app-2", "port": 8300 },
     { "name": "my-app-4", "port": 8500 }
-  ]
+  ],
+  "gitBranchDir": "~/Documents",
+  "libsDir": "~/Documents"
 }

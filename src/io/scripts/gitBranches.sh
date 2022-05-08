@@ -1,9 +1,11 @@
 selfFileName=`echo $0 | sed "s/.*\///" | sed "s/\.sh//"`
 
-projectsContainerDir=~/Documents/yun
+projectsContainerDir=$1
+showFlag=$2
 
-showFlag=$1
+echo "Dir: $projectsContainerDir"
 echo "Flag: main - show main(develop|master) branch only, other - show non-main branch only; otherwise - show all"
+
 showMainBranch=true
 showOtherBranch=true
 if [ "$showFlag" = "main" ]
