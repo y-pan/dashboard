@@ -3,9 +3,9 @@
   "logLevel": "debug",
   "targetLibs": "company-internal-lib1 company-internal-lib2",
   "portItems": [
-    { "name": "my-app-1", "port": 8000 },
-    { "name": "my-app-2", "port": 8300 },
-    { "name": "my-app-4", "port": 8500 }
+    { "name": "my-app-1", "port": 8000, "group": "Backend" },
+    { "name": "my-app-2", "port": 8300, "group": "Frontend"},
+    { "name": "my-app-4", "port": 8500}
   ],
   "gitBranchDir": "~/Documents",
   "libsDir": "~/Documents"

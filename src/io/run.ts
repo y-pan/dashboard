@@ -2,8 +2,8 @@ import util = require("util");
 import childProcess = require("child_process");
 const execAsync = util.promisify(childProcess.exec);
 
-export interface RunResult {
-  stdout: string;
+export interface RunResult<T=string> {
+  stdout: T;
   stderr: string;
 }
 
