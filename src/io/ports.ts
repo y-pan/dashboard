@@ -18,7 +18,7 @@ export async function getPorts(isDownOnly = false): Promise<RunResult> {
     if (stdout) {
       // the port is in use
       if (!isDownOnly) {
-        result.stdout += `[  up  ]    ${name} -> ${port} | pid=${String(stdout).trim()}\n`;
+        result.stdout += `[  up  ]    ${name} -> ${port} | pid=${String(stdout).replaceAll("\n", " ").trim()}\n`;
       }
     } else {
       // the port is not in use
