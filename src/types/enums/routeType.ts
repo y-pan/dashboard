@@ -7,6 +7,7 @@ export enum RouteType {
 
   ports = "/ports",
   portsDown = "/ports/down",
+  notes = "/notes",
 
   kubeImages = "/kube/images",
   kubeImagesDif = "/kube/images/dif",

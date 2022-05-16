@@ -16,6 +16,7 @@ import respondNotFound from "./routes/notFound";
 import { respondLibs } from "./routes/libs";
 import { respondKubeLog } from "./routes/kubeLog";
 import { validateConfig } from "./util/config";
+import { respondNotes } from "./routes/notes";
 
 let config: any;
 
@@ -43,6 +44,7 @@ app.get(RouteType.branchesOher, respondBranchesOther);
 app.get(RouteType.libs, respondLibs);
 app.get(RouteType.ports, respondAllPorts);
 app.get(RouteType.portsDown, respondDownPorts);
+app.get(RouteType.notes, respondNotes);
 
 app.get(RouteType.kubeImages, respondKubeImages);
 app.get(RouteType.kubeImagesDif, respondKubeImagesDifOnly);
