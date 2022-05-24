@@ -13,11 +13,11 @@ prodImagesLines=`echo ${prodImages} | sed "s/ /\n/g" | sed "s/^.*\///g"`
 selfFileName=`echo ${0} | sed "s/.*\///" | sed "s/\.sh//"`
 echo "##### ${selfFileName} - `date +"%Y-%m-%d %H:%M:%S"` #####\n"
 
-env2="$devImagesLines"
-namespace2=dev-blue
+env1="$devImagesLines"
+namespace1=dev-blue
 
-env1="$demoImagesLines"
-namespace1=demo-blue
+env2="$demoImagesLines"
+namespace2=demo-blue
 
 env3="$prodImagesLines"
 namespace3=prod-red
