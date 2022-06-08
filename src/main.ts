@@ -17,6 +17,7 @@ import { respondLibs } from "./routes/libs";
 import { respondKubeLog } from "./routes/kubeLog";
 import { validateConfig } from "./util/config";
 import { respondNotes } from "./routes/notes";
+import { respondScriptWrite } from "./routes/scriptWrite";
 
 let config: any;
 
@@ -52,6 +53,7 @@ app.get(RouteType.kubePods, respondKubePods);
 app.get(RouteType.kubePodsOff, respondKubePodsOff);
 app.get("/kube/log", respondKubeLog);
 
+app.get(RouteType.scriptWrite, respondScriptWrite);
 app.get("*", respondNotFound);
 
 app.listen(config.serverPort, async function () {

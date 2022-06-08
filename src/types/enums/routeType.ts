@@ -18,4 +18,6 @@ export enum RouteType {
   kubeLogDev = "/kube/log?namespace=dev-blue&serviceName=",
   kubeLogDemo = "/kube/log?namespace=demo-blue&serviceName=",
   kubeLogProd = "/kube/log?namespace=prod-red&serviceName=",
+
+  scriptWrite = "/script/write",
 }
