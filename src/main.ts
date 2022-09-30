@@ -17,13 +17,16 @@ import { respondLibs } from "./routes/libs";
 import { respondKubeLog } from "./routes/kubeLog";
 import { validateConfig } from "./util/config";
 import { respondNotes } from "./routes/notes";
+import { respondJavaVersion } from "./routes/javaVersion";
 
 let config: any;
 
 try {
   config = require("./config.json");
-} catch(e) {
-  console.error("config.json is missing. The example here: `src/config.example.json`");
+} catch (e) {
+  console.error(
+    "config.json is missing. The example here: `src/config.example.json`"
+  );
   throw e;
 }
 
@@ -42,6 +45,7 @@ app.get(RouteType.home, respondHome);
 app.get(RouteType.branches, respondBranchesAll);
 app.get(RouteType.branchesOher, respondBranchesOther);
 app.get(RouteType.libs, respondLibs);
+app.get(RouteType.javaVersion, respondJavaVersion);
 app.get(RouteType.ports, respondAllPorts);
 app.get(RouteType.portsDown, respondDownPorts);
 app.get(RouteType.notes, respondNotes);

@@ -4,6 +4,7 @@ export enum RouteType {
   branchesOher = "/branches/other",
 
   libs = "/libs",
+  javaVersion = "/javaVersion",
 
   ports = "/ports",
   portsDown = "/ports/down",
