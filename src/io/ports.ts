@@ -6,10 +6,15 @@ export async function getPorts(isDownOnly = false): Promise<RunResult> {
 
   let i = 0;
   for (let { name, port, group = "" } of config.portItems) {
+    if (port == undefined) {
+      // treat it as a separator to render a empty line
+      result.stdout += "\n";
+      continue;
+    }
     const { stderr, stdout } = await runAsync(`lsof -ti:${port}`);
 
     if (stdout) {
-      // the port is in use
+      // the port is active
       if (!isDownOnly) {
         result.stdout += `${
           i + 1
@@ -18,7 +23,7 @@ export async function getPorts(isDownOnly = false): Promise<RunResult> {
           .trim()}\n`;
       }
     } else {
-      // the port is not in use
+      // the port is inactive
       result.stdout += `${i + 1}\t[${group}]\t[ down ]\t${name} -> ${port}\n`;
     }
     i++;
