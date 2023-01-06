@@ -19,7 +19,7 @@ export async function getPorts(isDownOnly = false): Promise<RunResult> {
         result.stdout += `${
           i + 1
         }\t[${group}]\t[  up  ]\t${name} -> ${port}\tPid=${String(stdout)
-          .replaceAll("\n", " ")
+          .replace(/\n/g, " ")
           .trim()}\n`;
       }
     } else {
