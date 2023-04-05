@@ -18,7 +18,7 @@ export function escaped(text: string): string {
     return "";
   }
 
-  return String(text).replaceAll(">", "&gt;").replaceAll("<", "&lt;");
+  return String(text).replace(/[<>]/g, "&gt;");
 }
 
 export function mapStringify(
