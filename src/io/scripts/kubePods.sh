@@ -5,12 +5,12 @@ echo "flag: $flag"
 check() {
   namespace=$1
   echo "[${namespace}] ===>>>\n"
-  if [ "$flag" = "off" ]
-  then
-    lines=`kubectl get pods --namespace ${namespace} | tail -n +2 | grep -v "Running"`
+  if [ "$flag" = "off" ]; then
+    #  -n namespace
+    lines=$(kubectl get pods --namespace ${namespace} | tail -n +2 | grep -v "Running")
     echo "$lines"
   else
-    lines=`kubectl get pods --namespace ${namespace} | tail -n +2`
+    lines=$(kubectl get pods --namespace ${namespace} | tail -n +2)
     echo "$lines"
   fi
 }

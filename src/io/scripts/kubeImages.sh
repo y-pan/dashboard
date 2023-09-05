@@ -52,8 +52,8 @@ for imageName in $allImages; do
   tag2=$(echo $lineInEnv2 | sed "s/^.*://" | sed "s/${namespace2}-*//")
   tag3=$(echo $lineInEnv3 | sed "s/^.*://" | sed "s/${namespace3}-*//")
 
-  dif12=$([[ "$tag1" == "$tag2" ]] && echo "" || echo "<--${namespace2}")
-  dif13=$([[ "$tag1" == "$tag3" ]] && echo "" || echo "<--${namespace3}")
+  dif12=$([[ "$tag1" == "$tag2" ]] && echo "" || echo "&lt;--${namespace2}")
+  dif13=$([[ "$tag1" == "$tag3" ]] && echo "" || echo "&lt;--${namespace3}")
 
   echo "[${namespace1}]\t${lineInEnv1}"
 
