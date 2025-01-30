@@ -7,7 +7,8 @@ if [ -z "$namespace" ]; then
 fi
 
 timestamp=$(date +"%Y%m%d_%H%M%S")
-outdir=~/Downloads/kubelogs/kubelog_${timestamp}_${namespace}
+# outdir=~/Downloads/kubelogs/kubelog_${timestamp}_${namespace}
+outdir=~/Desktop/pnote/kubelogs/kubelog_${timestamp}_${namespace}
 mkdir -p $outdir
 
 echo "[outdir]: \n\t$outdir"
